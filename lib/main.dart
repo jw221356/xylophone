@@ -37,15 +37,35 @@ class XylophoneApp extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: gunban('도', Colors.red[300]!),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 24.0),
+            child: gunban('레', Colors.deepOrange[300]!),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 32.0),
+            child: gunban('미', Colors.orange[200]!),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 40.0),
+            child: gunban('파', Colors.deepOrange[400]!),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 48.0),
+            child: gunban('솔', Colors.red[400]!),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 56.0),
+            child: gunban('라', Colors.orange[400]!),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 64.0),
+            child: gunban('시', Colors.yellow[900]!),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 72.0),
             child: gunban('도', Colors.red),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 24.0),
-            child: gunban('레', Colors.orange),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 24.0),
-            child: gunban('미', Colors.yellow),
           ),
         ],
       ),
