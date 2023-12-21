@@ -35,6 +35,7 @@ class XylophoneApp extends StatelessWidget {
       body: Row(
         children: [
           gunban('도', Colors.red),
+          gunban('레', Colors.orange),
         ],
       ),
     );
