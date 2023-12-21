@@ -32,6 +32,57 @@ class XylophoneApp extends StatefulWidget {
 class _XylophoneAppState extends State<XylophoneApp> {
   Soundpool pool = Soundpool.fromOptions(options: SoundpoolOptions.kDefault);
 
+  List<int> _soundIds =[];
+
+  @override
+  void initState() {
+    super.initState();
+    initSoundPool();
+
+  }
+
+  Future<void> initSoundPool() async{
+    int soundId = await rootBundle
+        .load('assets/do1.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+
+    soundId = await rootBundle
+        .load('assets/re.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+
+    soundId = await rootBundle
+        .load('assets/me.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+
+    soundId = await rootBundle
+        .load('assets/fa.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+
+    soundId = await rootBundle
+        .load('assets/sol.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+
+    soundId = await rootBundle
+        .load('assets/la.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+
+    soundId = await rootBundle
+        .load('assets/si.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+
+    soundId = await rootBundle
+        .load('assets/do2.wav')
+        .then((soundData) => pool.load(soundData));
+    _soundIds.add(soundId);
+  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
