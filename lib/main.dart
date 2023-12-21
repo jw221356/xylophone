@@ -33,9 +33,20 @@ class XylophoneApp extends StatelessWidget {
         title: const Text('실로폰'),
       ),
       body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          gunban('도', Colors.red),
-          gunban('레', Colors.orange),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: gunban('도', Colors.red),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 24.0),
+            child: gunban('레', Colors.orange),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 24.0),
+            child: gunban('미', Colors.yellow),
+          ),
         ],
       ),
     );
