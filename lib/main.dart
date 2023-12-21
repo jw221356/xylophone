@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,11 +26,32 @@ class XylophoneApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('실로폰'),
       ),
+      body: Row(
+        children: [
+          gunban('도', Colors.red),
+        ],
+      ),
     );
   }
+}
+
+Widget gunban(String text, Color color) {
+  return Container(
+    width: 50,
+    height: double.infinity,
+    color: color,
+    child: Center(
+      child: Text(
+        text,
+        style: const TextStyle(color: Colors.white),
+      ),
+    ),
+  );
 }
 
